@@ -1,5 +1,9 @@
 function CoinTracker() {
-  return <div></div>;
+  return (
+    <div>
+
+    </div>
+  );
 }
 
 export default CoinTracker;
