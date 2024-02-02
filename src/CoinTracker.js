@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 function CoinTracker() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
-  const test = "test";
   useEffect(() => {
     fetch("https://api.coinpaprika.com/v1/tickers?limit=100")
       .then((response) => response.json())
@@ -19,8 +18,6 @@ function CoinTracker() {
       <ul>
         {coins.map((coin, index) => <li key={index}>{coin.name} ({coin.symbol}) : {coin.quotes.USD.price} $</li>)}
       </ul>
-      <input type="text" placeholder="Coin Tracker" value={test} />
-
     </div>
   );
 }
